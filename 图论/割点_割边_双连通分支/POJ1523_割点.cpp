@@ -48,8 +48,8 @@ void tarjan(int u, int fa)
             if (dfn[u] <= low[v])
                 res[u] ++;
         }
-        else if (v != fa)
-                low[u] = min(low[u], dfn[v]);
+        else
+			low[u] = min(low[u], dfn[v]);
     }
 
     if (fa == 0)
