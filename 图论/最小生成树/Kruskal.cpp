@@ -1,4 +1,4 @@
-//POJ 1287 Networking -- Prim
+//POJ 1287 Networking -- Kruskal
 #include <cstdio>
 #include <cstring>
 #include <iostream>
