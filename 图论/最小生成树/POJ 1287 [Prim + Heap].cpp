@@ -1,4 +1,4 @@
-//POJ 1287 Networking -- Prim
+//POJ 1287 Networking -- Prim + Heap
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
