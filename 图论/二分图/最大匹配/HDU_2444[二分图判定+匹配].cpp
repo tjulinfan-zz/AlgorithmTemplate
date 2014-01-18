@@ -20,36 +20,6 @@ bool color(int u, int c) {	//Ⱦɫ
     } else return flag[u] == c;
 }
 
-int link[maxn];
-bool used[maxn];
-
-bool dfs(int u) {
-    for (size_t i = 0; i < e[u].size(); i++) {
-        int v = e[u][i];
-        if (!used[v]) {
-            used[v]=true;
-            if(link[v]==-1 || dfs(link[v])) {
-                link[v]=u;
-                return true;
-            }
-        }
-    }
-    return false ;
-}
-
-int Xiong()
-{
-    int res=0;
-    for (int i = 0; i < n; i++) link[i] = -1;
-    for(int i=0;i<n;i++) {
-        if (flag[i]) continue;
-        memset(used,false,sizeof(used));
-        if(dfs(i))
-            res++;
-    }
-    return res;
-}
-
 int main() {
     while (cin>>n>>m) {
         for (int i = 0; i < n; i++) e[i].clear();
@@ -63,12 +33,6 @@ int main() {
         bool ans = true;
         for (int i = 0; i < n; i++)
             if (flag[i] == -1) ans = ans && color(i, 0);
-        if (!ans) {
-            cout<<"No"<<endl;
-            continue;
-        }
-        int cnt = Xiong();
-        cout<<cnt<<endl;
     }
     return 0;
 }
