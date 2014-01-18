@@ -1,4 +1,9 @@
 //POJ 1274	 The Perfect Stall 二分图匹配 匈牙利算法
+/*
+ | 二分图最小顶点覆盖 = 二分图最大匹配；
+ | DAG图的最小路径覆盖 = 节点数（n）- 最大匹配数；
+ | 二分图最大独立集 = 节点数（n）- 最大匹配数；
+*/
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
