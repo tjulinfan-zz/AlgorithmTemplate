@@ -1,3 +1,4 @@
+//用法 求a关于b的逆元——x
 long long extend_gcd(long long a, long long b)
 {
     if (b == 0)
