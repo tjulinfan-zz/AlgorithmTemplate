@@ -42,13 +42,14 @@ int lca(int u, int v) {
         if (steps >> k & 1)
             u = parent[u][k];
     }
+	if (u == v) return u;
     for (int k = MAX_LOG_V - 1; k >= 0; -- k) {
         if (parent[u][k] != parent[v][k]) {
             u = parent[u][k];
             v = parent[v][k];
         }
     }
-    return u;
+    return parent[u][0];
 }
 
 void init() {
